@@ -1,0 +1,58 @@
+# =========================
+# 1. PYTHON & ML CORE
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints
+
+# Virtual Environments (Local to your LOQ)
+venv/
+.venv/
+env/
+ENV/
+
+# Environment Variables (CRITICAL: API Keys)
+.env
+.env.local
+.env*.local
+
+# Celery / Redis
+celerybeat-schedule
+celerybeat.pid
+
+# =========================
+# 2. OS & IDE FILES
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# =========================
+# 3. GLOBAL NODE (Safety catch)
+# =========================
+node_modules/
+data
+structure.txt
+.clerk
+
+// TESTING
+work.txt
+observation.txt
+split.py
+acme_insurance.csv
+observation_response.txt
+observation_v2.txt
+created_house_price_prediction.csv
+observations_v3.txt
+
+# =========================
+# 4. ANALYSIS & PRESENTATION FILES
+# =========================
+*_ANALYSIS.txt
+*_ANALYSIS_*.txt
+*_PRESENTATION.txt
+# Accidental nested clone of this repo (has its own .git)
+Project-Prism/
