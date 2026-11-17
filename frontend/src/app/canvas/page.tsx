@@ -191,9 +191,21 @@ function CanvasBoard() {
       const token = await getToken();
       if (!token) throw new Error("No token available");
       
+      // With no prompt typed, fall back on what is on the canvas: run the drawn
+      // graph if there is one, otherwise ask the agent for the full default
+      // pipeline so that "select a dataset and press Run" is a complete action.
+      const DEFAULT_PIPELINE_PROMPT =
+        "Run the complete standard pipeline on this dataset. Repair the file if it is " +
+        "structurally broken, clean it by removing duplicates, imputing missing values and " +
+        "coercing numeric columns stored as text, generate plots, engineer features, and " +
+        "train a model. Choose the most suitable target column, task type and evaluation " +
+        "metric yourself from the data profile.";
+      const fallbackPrompt =
+        nodes.length > 0 ? "Execute my manual pipeline." : DEFAULT_PIPELINE_PROMPT;
+
       const formData = new FormData();
       formData.append("dataset_id", selectedDatasetId);
-      formData.append("prompt", aiPrompt.trim() || "Execute my manual pipeline.");
+      formData.append("prompt", aiPrompt.trim() || fallbackPrompt);
       if (nodes.length > 0) {
         formData.append("manual_nodes", JSON.stringify(nodes));
         formData.append("manual_edges", JSON.stringify(edges));
