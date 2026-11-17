@@ -11,7 +11,7 @@ import {
 // ============================================================
 // CONFIGURATION
 // Replace this with your real Web3Forms access key.
-// Get one free at: https://web3forms.com (enter bhavyadoriya2007@gmail.com)
+// Get one free at: https://web3forms.com (enter sidcode973@gmail.com)
 // ============================================================
 const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "";
 
@@ -114,10 +114,10 @@ export default function ContactPage() {
                 <h3 className="font-black text-xl uppercase">EMAIL</h3>
               </div>
               <a
-                href="mailto:bhavyadoriya2007@gmail.com"
+                href="mailto:sidcode973@gmail.com"
                 className="font-bold text-sm break-all hover:underline underline-offset-4"
               >
-                bhavyadoriya2007@gmail.com
+                sidcode973@gmail.com
               </a>
               <p className="font-bold text-xs text-gray-700 mt-2">
                 Primary contact for all inquiries.
@@ -159,7 +159,7 @@ export default function ContactPage() {
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-white border-4 border-black rounded-xl shadow-[4px_4px_0px_#000] hover:bg-gray-100 active:translate-x-1 active:translate-y-1 active:shadow-none transition-all">
                   <Globe size={24} />
                 </a>
-                <a href="mailto:bhavyadoriya2007@gmail.com" className="p-3 bg-white border-4 border-black rounded-xl shadow-[4px_4px_0px_#000] hover:bg-gray-100 active:translate-x-1 active:translate-y-1 active:shadow-none transition-all">
+                <a href="mailto:sidcode973@gmail.com" className="p-3 bg-white border-4 border-black rounded-xl shadow-[4px_4px_0px_#000] hover:bg-gray-100 active:translate-x-1 active:translate-y-1 active:shadow-none transition-all">
                   <Mail size={24} />
                 </a>
               </div>
